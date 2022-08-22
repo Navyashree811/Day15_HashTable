@@ -2,26 +2,26 @@ package com.bridgelabz.hashtable;
 
 public class HashTable {
 	public static void main(String[] args) {
-		System.out.println("...Welcome to Hash Table program...");
-		// Creating object as hashCode for LinkedList class
-		LinkedList<String, Integer> hashCode = new LinkedList();
-		String message = "To be or not to be";
+		System.out.println("Welcome to HashTable program");
+
+		// Creating object as list for LinkedList class
+		LinkedList<String, Integer> list = new LinkedList();
+		String message = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
 		// String to String[] conversion.
 		String[] messageArray = message.toLowerCase().split(" ");
 		// Here we are Iterating within the array
 		for (String word : messageArray) {
 			// Search for the word in the linked list
-			Integer value = hashCode.get(word);
-			if (value == null) {
+			Integer value = list.get(word);
+			if (value == null)
 				value = 1;
-			} else {
+			else
 				value = value + 1;
-				hashCode.add(word, value);
-			}
+			list.add(word, value);
 		}
 		// Display the linked list
-		System.out.println(hashCode);
+		System.out.println(list);
 	}
 
 }
